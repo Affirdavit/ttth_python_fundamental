@@ -4,7 +4,7 @@ while True:
     if new.lower() == 'stop':
         break
     s.append(new)
-s  = set(s)
+s = set(s)
 sorted_s = sorted(s)
 print(f"The sequence has {len(s)} variables")
 
