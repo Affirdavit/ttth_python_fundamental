@@ -1,30 +1,10 @@
-can = {
-    0: "Canh",
-    1: "Tan",
-    2: "Nham",
-    3: "Quy",
-    4: "Giap",
-    5: "At",
-    6: "Binh",
-    7: "Dinh",
-    8: "Mau",
-    9: "Ky",
-}
-chi = {
-    0: "Than",
-    1: "Dau",
-    2: "Tuat",
-    3: "Hoi",
-    4: "Ty",
-    5: "Suu",
-    6: "Dan",
-    7: "Mao",
-    8: "Thin",
-    9: "Ty.",
-    10: "Ngo",
-    11: "Mui",
-}
-nam = int(input("Nhap so nam tuong ung: "))
-can_du = nam % 10
-chi_du = nam % 12
-print(f"{can[can_du]} {chi[chi_du]}")
+can = ("Canh", "Tan", "Nham", "Quy", "Giap", "At", "Binh", "Dinh", "Mau", "Ky")
+chi = ("Than", "Dau", "Tuat", "Hoi", "Ty", "Suu", "Dan", "Mao", "Thin", "Ty.")
+try:
+    while True:
+        nam = int(input("Nhap so nam tuong ung: "))
+        if nam > 0:
+            break
+    print(f"{can[nam % 10]} {chi[nam % 12]}")
+except ValueError:
+        print("Value Error. Must be number")
