@@ -41,13 +41,16 @@ def them_goi_cuoc(goi_cuoc):
 def cap_nhap_goi(goi_cuoc):
     ma_goi = input("Nhap ma goi can cap nhap: ")
     if ma_goi in goi_cuoc.keys():
-        thong_tin = input("Vui long chon thong tin can cap nhap (Dung luong, Gia, Ngay): ")
-        if thong_tin == 'Dung luong':
-            ma_goi[1] = input("Nhap dung luong moi: ")
-        elif thong_tin == 'Gia':
-            ma_goi[0] = input("Nhap gia moi: ")
-        elif thong_tin == 'Ngay':
-            ma_goi[2] = input("Nhap so ngay moi: ")
+        thong_tin = input("Vui long chon thong tin can cap nhap (1: Dung luong, 2: Gia, 3: Ngay): ")
+        if thong_tin == '1':
+            goi_cuoc[ma_goi][1] = int(input("Nhap dung luong moi: "))
+            print("Cap nhap thanh cong")
+        elif thong_tin == '2':
+            goi_cuoc[ma_goi][0] = int(input("Nhap gia moi: "))
+            print("Cap nhap thanh cong")
+        elif thong_tin == '3':
+            goi_cuoc[ma_goi][2] = int(input("Nhap so ngay moi: "))
+            print("Cap nhap thanh cong")
         else:
             print("Vui long chon dung dinh dang thong tin can thay doi")
     else:
